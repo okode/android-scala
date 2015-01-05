@@ -16,7 +16,6 @@
 
 package com.okode.androidscala
 
-import android.os.Bundle
 import android.widget.TextView
 import org.scaloid.common._
 
@@ -24,10 +23,10 @@ class MainActivity extends SActivity {
 
   lazy val txtMessage = find[TextView](R.id.txtMessage)
 
-  protected override def onCreate(savedInstanceState: Bundle) {
-    super.onCreate(savedInstanceState)
+  onCreate {
     setContentView(R.layout.activity_main)
     txtMessage.setText("Hello world from Scala!")
     toast("Toast created from Scala")
   }
+
 }
